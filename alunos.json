@@ -1,0 +1,23 @@
+[
+{"nome": "Lucas", "ra": "09", "idade": "19", "media": "6", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Camila", "ra": "14", "idade": "21", "media": "8", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Pedro", "ra": "07", "idade": "25", "media": "5", "sexo": "Masculino", "situacao": "Reprovado"},
+{"nome": "Bruno", "ra": "11", "idade": "23", "media": "8", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Diego", "ra": "13", "idade": "22", "media": "6", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Julia", "ra": "04", "idade": "19", "media": "4", "sexo": "Feminino", "situacao": "Reprovado"},
+{"nome": "Icaro", "ra": "03", "idade": "24", "media": "10", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Laura", "ra": "12", "idade": "20", "media": "9", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Isabel", "ra": "10", "idade": "21", "media": "7", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Ricardo", "ra": "05", "idade": "22", "media": "8", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Mariana", "ra": "01", "idade": "23", "media": "9", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Enrico", "ra": "02", "idade": "21", "media": "6", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Alice", "ra": "08", "idade": "22", "media": "9", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Mariana", "ra": "15", "idade": "20", "media": "7", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Gustavo", "ra": "16", "idade": "24", "media": "5", "sexo": "Masculino", "situacao": "Reprovado"},
+{"nome": "Thais", "ra": "17", "idade": "21", "media": "6", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Leonardo", "ra": "18", "idade": "22", "media": "8", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Larissa", "ra": "19", "idade": "23", "media": "9", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Renan", "ra": "20", "idade": "19", "media": "7", "sexo": "Masculino", "situacao": "Aprovado"},
+{"nome": "Luana", "ra": "21", "idade": "20", "media": "6", "sexo": "Feminino", "situacao": "Aprovado"},
+{"nome": "Vitor", "ra": "22", "idade": "22", "media": "9", "sexo": "Masculino", "situacao": "Aprovado"}
+]

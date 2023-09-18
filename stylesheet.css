@@ -1,0 +1,105 @@
+/* Reset de Estilos Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Título da Página */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para o Formulário */
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos para Rótulos de Campos */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para Campos de Entrada de Texto e Seleção */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Estilos para Botões */
+button {
+    width: 300px; /* Defina a largura desejada para os botões */
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre os botões */
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para Botões "Cadastrar" e "Limpar campos" (Azul) */
+#btCadastrar, #btLimpar {
+    background-color: #007bff;
+    margin-top: 2px;
+}
+
+/* Estilos para Botões "Listar" e "Exportar JSON" (Amarelo) */
+#btListar, #btExportJSON {
+    background-color: #ffc107;
+    margin-top: 2px;
+}
+
+/* Estilos para os Botões de Ordenação (Verde) */
+#btOrdenarRA,
+#btOrdenarNome,
+#btOrdenarNomeAprovados {
+    background-color: #28a745;
+    margin-top: 2px;
+}
+
+/* Estilos de Hover para Botões */
+button:hover {
+    filter: brightness(1.2); /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Estilos para a Lista de Alunos */
+#listaAlunos {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para o Grupo de Botões */
+p {
+    text-align: center;
+    margin-top: 10px;
+}

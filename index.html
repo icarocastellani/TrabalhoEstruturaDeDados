@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Trabalho - Estrutura de Dados</title>
+</head>
+<body>
+    <h1>Cadastro de Alunos</h1>
+        <!--Formulário-->
+        <form>
+            <!-- Campos de entrada -->
+            <label for="inNomeAluno">Nome: </label>
+            <input type="text" id="inNomeAluno" required>
+            <label for="inRA">RA: </label>
+            <input type="text" id="inRA" required>
+            <label for="inIdade">Idade: </label>
+            <input type="text" id="inIdade" required>
+            <label for="inMedia">Média: </label>
+            <input type="text" id="inMedia" required>
+            <label for="inSexo">Sexo: </label>
+            <select name="inSexo" id="inSexo">
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+            </select>
+            <p>
+                <!-- Botão de entrada "Cadastrar" -->
+                <button type="button" id="btCadastrar">Cadastrar</button>
+                <!-- Botão para Limpar campos "Limpar Campos" -->
+                <button type="button" id="btLimpar">Limpar campos</button>
+            </p>
+            <p>
+                <!-- Botão de saída "Listar cadastrados" -->
+                <button type="button" id="btListar">Listar</button>
+                <!-- Botão para Saída (Gerar arquivo JSON) -->
+                <button type="button" id="btExportJSON">Exportar em JSON</button>
+            </p>
+            <p>
+                <!-- Botões de Ordenação -->
+                <button type="button" id="btOrdenarNome">Ordenar por Nome (A-Z)</button>
+                <button type="button" id="btOrdenarRA">Ordenar por RA (Z-A)</button>
+                <button type="button" id="btOrdenarNomeAprovados">Ordenar aprovados por Nome (A-Z)</button>
+            </p>
+        </form>
+    <div id="listaAlunos"></div> 
+
+    <script src="codigos.mjs"></script>
+</body>
+</html>
