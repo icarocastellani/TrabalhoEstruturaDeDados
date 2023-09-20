@@ -1,6 +1,5 @@
 // Array para armazenar os alunos
 let alunosCadastrados = [];
-let alunosAprovados = [];
 
 // Função que coleta, verifica e armazena detalhes dos alunos.
 function CadastroAlunos () {
@@ -59,14 +58,17 @@ function CadastroAlunos () {
     alunosCadastrados.push(alunos);
 
     // Chame a função para exibir a listagem de títulos
-    listaAlunos()
+    listaAlunos(alunosCadastrados)
 
     // Chame a função Limpar campos
     LimparCampos() 
 }
 
-// Função que exibe os dados dos alunos cadastrados na div do HTML
-function listaAlunos() {
+// Função que exibe os dados dos alunos cadastrados na div do HTML 
+function btlistaAlunos() {
+    //Função recebe como padrão a lista de alunos cadastrados    
+    let lista_alunos = alunosCadastrados
+
     // Referência ao elemento HTML - div com id "listaAlunos")
     let listagemElement = document.getElementById("listaAlunos");
 
@@ -74,7 +76,23 @@ function listaAlunos() {
     listagemElement.innerHTML = "";
 
     // Itere sobre o array de títulos cadastrados e crie elementos HTML para exibir as informações
-    for (let alunos of alunosCadastrados) {
+    for (let alunos of lista_alunos) {
+        let tituloElement = document.createElement("div");
+        tituloElement.textContent = `Nome: ${alunos.nome}, RA: ${alunos.ra}, Idade: ${alunos.idade}, Media: ${alunos.media}, Sexo: ${alunos.sexo}, Situação: ${alunos.situacao}`;
+        listagemElement.appendChild(tituloElement);
+    }
+}
+
+//Função que exibe os dados alterados em outras funções
+function listaAlunos(lista_alunos) {
+    // Referência ao elemento HTML - div com id "listaAlunos")
+    let listagemElement = document.getElementById("listaAlunos");
+
+    // Limpe o conteúdo atual da listagem
+    listagemElement.innerHTML = "";
+
+    // Itere sobre o array de títulos cadastrados e crie elementos HTML para exibir as informações
+    for (let alunos of lista_alunos) {
         let tituloElement = document.createElement("div");
         tituloElement.textContent = `Nome: ${alunos.nome}, RA: ${alunos.ra}, Idade: ${alunos.idade}, Media: ${alunos.media}, Sexo: ${alunos.sexo}, Situação: ${alunos.situacao}`;
         listagemElement.appendChild(tituloElement);
@@ -127,7 +145,7 @@ function OrdenarpNome() {
     console.log(`Bubble Sort por nome concluído em ${loopCount} iterações.`); // Exibe o número de iterações no console
 
     // Após a ordenação, chame a função listaAlunos para exibir os dados
-    listaAlunos();
+    listaAlunos(alunosCadastrados);
 }
 
 // Ordenar por RA utilizando Bubble Sort (Z-A)
@@ -152,12 +170,39 @@ function OrdenarpRA() {
     console.log(`Bubble Sort por RA concluído em ${loopCount} execuções.`); // Exibe o número de execuções no console
 
     // Após a ordenação, chame a função listaAlunos para exibir os dados
-    listaAlunos();
+    listaAlunos(alunosCadastrados);
 }
 
 // Ordenar por nome Aprovados (A-Z)
 function OrdenarpNomeA() {
+    // Referência ao elemento HTML - div com id "listaAlunos")
+    const listaAlunosElement = document.getElementById("listaAlunos");
+    listaAlunosElement.innerHTML = "";
+    let swap;
+    let loopCount = 0;
+    alunosAprovados = []
+    //Iterador que faz a lista apenas dos aprovados usando busca Sequencial
+    for(let i = 0; i < alunosCadastrados.length; i++){
+        if(alunosCadastrados[i].situacao === "Aprovado"){
+            alunosAprovados.push(alunosCadastrados[i])
+        }
+    }
+    do {
+        swap = false;
+        for (let i = 0; i < alunosAprovados.length - 1; i++) {
+            if (alunosAprovados[i].nome > alunosAprovados[i + 1].nome) {
+                // Trocar os alunos de posição
+                [alunosAprovados[i], alunosAprovados[i + 1]] = [alunosAprovados[i + 1], alunosAprovados[i]];
+                swap = true;
+            }
+            loopCount++; // Incrementar o contador de loop
+        }
+    } while (swap);
 
+    console.log(`Bubble Sort por nome de aprovados concluído em ${loopCount} iterações.`); // Exibe o número de iterações no console
+
+    // Após a ordenação, chame a função listaAlunos para exibir os dados
+    listaAlunos(alunosAprovados);
 }
 
 //Botões e evenos
@@ -166,7 +211,7 @@ document.getElementById("btCadastrar").addEventListener("click", CadastroAlunos)
 document.getElementById("btLimpar").addEventListener("click", LimparCampos); // Evento clique botão "Limpar Campos"
 
     // Botões amarelos
-document.getElementById("btListar").addEventListener("click", listaAlunos); // Evento clique botão "Listar"
+document.getElementById("btListar").addEventListener("click", btlistaAlunos); // Evento clique botão "Listar"
 document.getElementById("btExportJSON").addEventListener("click", DownloadJSON); // Evento clique botão "Exportar em JSON"
     
     // Botões verdes
